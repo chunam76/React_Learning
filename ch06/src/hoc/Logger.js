@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // LoggingComponent 함수, Logger 클래스를 리턴함.
+// Logger 클래스
+// componentWillMount 될때 시간 기록
+// componentDidMount 될때 시간 출력
+// componentWillUpdate 될때 시간 기록
+// componentDidUpdate 될때 시간 출력
 let Logger = LoggingComponent => class Logger extends Component {
 
     componentWillMount() {
