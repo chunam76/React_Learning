@@ -5,6 +5,7 @@ import ContactItem from './ContactItem';
 class ContactList extends Component {
     render() {
         let contacts = this.props.contacts.map((item)=> {
+            { /* ContactItem 을 리턴 */ }
             return <ContactItem key={item.no} {...item} />
         })
 

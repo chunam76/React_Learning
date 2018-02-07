@@ -25,6 +25,7 @@ class ContactItem extends Component {
     }
 }
 
+// propTypes 으로 유효성 및 타입 지정
 ContactItem.propTypes = {
     no: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
