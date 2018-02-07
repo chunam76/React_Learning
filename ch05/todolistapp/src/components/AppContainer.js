@@ -25,6 +25,14 @@ class AppContainer extends Component {
             { $push : [ newTodo ] }
         )
         this.setState({ todolist : addedTodolist })
+
+        // immer 플러그인 적용하여 불변성 확보
+        // let newTodo = { no: new Date().getTime(), todo:todo, done:false };
+        // const addedTodolist = produce(this.state.todolist, (todolist)=> {
+        //     todolist.push(newTodo);
+        // })
+
+        // this.setState({ todolist : addedTodolist })
     }
 
     deleteTodo(no) {
@@ -35,6 +43,13 @@ class AppContainer extends Component {
             }
         )
         this.setState({ todolist : deletedTodolist })
+
+        // immer 플러그인 적용하여 불변성 확보
+        // let index = this.state.todolist.findIndex((todo) => todo.no === no)
+        // const deletedTodolist = produce(this.state.todolist, (todolist)=> {
+        //     todolist.splice(index,1);
+        // })
+        // this.setState({ todolist : deletedTodolist })
     }
 
     toggleDone(no) {
@@ -46,6 +61,13 @@ class AppContainer extends Component {
             }
         })
         this.setState({ todolist : updatedTodolist })
+                
+        // immer 플러그인 적용하여 불변성 확보
+        // let index = this.state.todolist.findIndex((todo) => todo.no === no)
+        // const updatedTodolist = produce(this.state.todolist, (todolist) => {
+        //     todolist[index].done = !todolist[index].done;
+        // })
+        // this.setState({ todolist : updatedTodolist })
     }
 
     render() {
