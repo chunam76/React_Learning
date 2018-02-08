@@ -1,0 +1,43 @@
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+	
+	AppContext.js 생성
+	import { createContext } from 'react';
+	const AppContext = createContext();
+	
+	
+	App 에서 Render 함수 내에서 state 를 AppContext.Provider 에 넣어줌
+	App.js
+	class App extends Component {
+	  constructor(props) {
+		super(props);
+		this.state = { childMsg : "자식!", grandChildMsg:"손주", greatGrandChildMsg:"증손주" };
+	  }
+	  
+	  render() {
+		return (
+			<AppContext.Provider value={this.state}>
+			...
+		}
+	  
+	  
+	Child 에서는 아래와 같이 사용
+	<AppContext.Consumer>
+	{(context)=> {
+		let msg = context.childMsg;
+		return (
+			<div className="box">
+				<h2>Child!! {msg}</h2>
+				<GrandChild />
+			</div>
+		)
+	}}
+	</AppContext.Consumer>	  
+	
+	
+	단점
+	1) => 함수에 대해 익숙하지 ㅇ낳다.
+	2) 컴포넌트의 재사용하기 힘들 수 있다, Context 를 사용할 수 있는 환경에서만 적용가능한다.
+	
+	사용가이드
+	1) 컴포넌트 Tree에서 공통으로 사용할 데이터를 정의해놓고 사용하면 좋을 듯
