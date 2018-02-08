@@ -2,7 +2,7 @@ import App from './App';
 import ContactActionCreator from '../actions/ContactActionCreator';
 import { connect } from 'react-redux';
 
-// react-redux의 connect 고차함수 생성하기
+// react-redux의 connect 고차함수 AppContainer 생성하기
 // 상태에 대한 맵핑(state)
 const mapStateToProps = (state)=> {
     return {
