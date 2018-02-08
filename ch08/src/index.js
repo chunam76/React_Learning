@@ -10,8 +10,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 // 3. Reducx 사용 예제 - multi Reducer 사용
 // import AppContainer from './todolistapp2/components/AppContainer';
 // 4. Reducx 사용 예제 - Reducx Middleware 사용
-import AppContainer from './todolistapp3/components/AppContainer';
-import TodoStore from './todolistapp3/redux/TodoStore';
+// import AppContainer from './todolistapp3/components/AppContainer';
+// import TodoStore from './todolistapp3/redux/TodoStore';
+// 5. Reducx 사용 예제 - Reducx Thunk 사용하여 비동기 처리
+import AppContainer from './todolistapp4/components/AppContainer';
+import TodoStore from './todolistapp4/redux/TodoStore';
 import { Provider } from 'react-redux';
 import registerServiceWorker from './registerServiceWorker';
 
