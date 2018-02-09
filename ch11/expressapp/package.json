@@ -1,0 +1,29 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack  --config ./webpack.ssr.config.js", // 빌드를 먼저하고
+    "runssr": "node build/server.js", // 서버 사이드로 실행
+    "server": "npm-run-all --serial  build runssr", // 순차적으로 실행
+    "build:watch": "webpack  --config ./webpack.ssr.config.js --watch", // 소스가 수정되면 자동으로 갱신
+    "run:watch": "nodemon build/server.js",  // 소스가 수정되면 자동으로 갱신
+    "server:watch": "npm run build && npm-run-all --parallel build:watch run:watch" // 동시에 실행
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.14.11",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^3.10.0"
+  }
+}
