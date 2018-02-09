@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
@@ -15,8 +16,13 @@ import './index.css';
 // import App from './routertest4/components/App';
 // 4. React Router - Router 컴포넌트
 // Switch, Redirect 컴포넌트
-import App from './routertest5/components/App';
+// import App from './routertest5/components/App';
+// 5. React Router - Router Config
+import App from './routerconfigtest/components/App';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<App />, document.getElementById('root'));
+// App을 BrowserRouter 로 감싸준다.
+ReactDOM.render((<Router><App /></Router>), document.getElementById('root'))
 registerServiceWorker();
