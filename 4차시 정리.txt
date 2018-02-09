@@ -1,0 +1,24 @@
+4차시 요약
+1. Redux
+1) 단일 Store
+ - Action Create 가 되면 항상 Store를 거쳐서 Reducer로 전달
+2) Reducer
+ - 다중 Reducer
+ - 반드시 불변성을 확보해야 한다. immer, immutable-helper
+ - Combine을 통해 RootReducer를 생성
+3) Connect 고차함수로 AppComponent로 전달
+
+2. Redux Middleware
+1) Redux Thunk 를 사용하여 Store에 미들웨어를 추가하여 공통 기능 수행
+
+3. Redux DevTool
+1) 상태와 데이터가 어떻게 변경되는지 추적
+2) 상태와 데이터를 Revert 가능
+
+4. Router
+1) 매칭되는 URL을 기반으로 화면에 노출
+2) matchParam
+3) 컴포넌트로 속성 전달
+ - 4 버전과 3버전의 차이가 있다.
+
+
