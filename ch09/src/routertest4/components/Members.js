@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
 class Members extends Component {
+
+  goHome() {
+    if (window.confirm('정말로 홈으로 이동할까요?') === true) {
+      // Router의 history를 이용하여 다른 경로로 이동
+      this.props.history.push('/');
+    }
+  }
+
   render() {
     const {members} = this.props;
     let imgstyle={ width: 90, height:80 }
@@ -22,9 +30,11 @@ class Members extends Component {
             {list}
           </div>
         </div>
+        {/* Home 버튼 선택 시 goHome 호출 */}
+        <button className="btn btn-primary" onClick={this.goHome.bind(this)} >
+          Home으로 이동</button>
       </div>
-    )
-  
+    )  
   }
 }
 

@@ -10,7 +10,12 @@ import './index.css';
 // 3. React Router - URL 파라미터를 이용하기
 // Song 화면에서 곡리스트가 표시되고, 곡 클릭 시, Youtube가 Play 되게끔
 // import App from './routertest3/components/App';
-
+// 4. React Router - Router 객체 속성
+// 속성 중 history를 이용하여 다른 경로로 이동하기
+// import App from './routertest4/components/App';
+// 4. React Router - Router 컴포넌트
+// Switch, Redirect 컴포넌트
+import App from './routertest5/components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
